@@ -7,14 +7,6 @@ def seaching(x,y,stump):
             if s[x+i][y+j] != set_stump[stump_idx]:
                 get_stump += 1
         stump_idx = abs(stump_idx-1)
-                
-    stump_idx = abs(stump-1)
-    for i in range(8):
-        for j in range(8):
-            stump_idx = abs(stump_idx-1)
-            if s[x+j][y+i] != set_stump[stump_idx]:
-                get_stump += 1
-        stump_idx = abs(stump_idx-1)
     return get_stump
 
 set_stump = ['B','W']
@@ -33,4 +25,5 @@ for i in range(n-7):
         if mmin > find_val:
             mmin = find_val
         
-print(mmin//2)
+print(mmin)
+        
